@@ -1,0 +1,46 @@
+POST http://localhost:5000/api/users 
+Content-Type: application/json
+
+{
+    "name": "Gagan Vasanth",
+    "email": "mynameisgagan20@gmail.com",
+    "password": "gagan123"
+}
+
+### Sending the JWT token after login to get the details of the user
+
+GET http://localhost:5000/api/auth
+Content-Type: application/json
+
+{
+    "email": "mynameisgagan20@gmail.com",
+    "password": "gagan123" 
+}
+
+### For login and getting the JWT token
+
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+    "email": "mynameisgagan20@gmail.com",
+    "password": "gagan123" 
+}
+
+### Posting the Journal into db with user email and journal data
+
+POST http://localhost:5000/api/journals/postJournalsById
+Content-Type: application/json
+
+{
+    "email": "noor@gmail.com",
+    "data": "<p>This is my first journal</p>"
+}
+
+### Get journals by email
+POST http://localhost:5000/api/journals/getJournalsById
+Content-Type: application/json
+
+{
+    "email": "noor@gmail.com"
+}
