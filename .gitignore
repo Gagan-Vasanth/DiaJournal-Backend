@@ -1,2 +1,4 @@
 node_modules
 .env
+config/db.js
+config/default.json
